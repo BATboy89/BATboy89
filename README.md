@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BATify</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.15/babel.min.js"></script>
-  <style>
-    body { background-color: #121212; color: #fff; font-family: Arial, sans-serif; }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #282828; }
-    ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #b3b3b3; }
-  </style>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="text/babel">
-    function App() {
-      const [songs, setSongs] = React.useState([]);
-      const [currentSong, setCurrentSong] = React.useState(null);
-      const audioRef = React.useRef(new Audio());
 
-      // Načítanie MP3 súborov
+
+     // Načítanie MP3 súborov
       const handleFileUpload = (event) => {
         const files = Array.from(event.target.files);
         const newSongs = files.map((file) => ({
